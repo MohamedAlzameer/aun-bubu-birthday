@@ -1,0 +1,470 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8fb;
+    color: #633b4c;
+}
+
+/* Welcome Screen */
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #ffe2ed, #fff7fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.welcome-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-card {
+    background: white;
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 10px 40px #e8a6c455;
+}
+
+.heart {
+    font-size: 55px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.welcome-card h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #e76d9a;
+    margin: 15px 0;
+}
+
+.welcome-card p {
+    margin: 10px 0;
+}
+
+.small-text {
+    color: #b47b92;
+    font-size: 13px;
+}
+
+button, .main-button {
+    background: linear-gradient(135deg, #f48caf, #e66b9b);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover, .main-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #e66b9b55;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #e9b3c322;
+}
+
+.logo {
+    color: #df6491;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #80566a;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: #e66b9b;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 620px;
+    background: linear-gradient(135deg, #ffe4ef, #fff8fb, #fbd8e7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.top-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #c87999;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(55px, 9vw, 95px);
+    color: #e66b9b;
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    color: #a84d73;
+    margin: 10px 0;
+}
+
+.hero-description {
+    line-height: 2;
+    margin: 20px auto;
+    max-width: 520px;
+    font-size: 14px;
+}
+
+.birthday-date {
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #c66e91;
+    margin: 25px 0;
+}
+
+.floating-heart {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    font-size: 45px;
+    animation: float 4s infinite ease-in-out;
+}
+
+.floating-flower {
+    position: absolute;
+    bottom: 15%;
+    right: 12%;
+    font-size: 45px;
+    animation: float 5s infinite ease-in-out;
+}
+
+/* Countdown */
+
+.countdown-section {
+    padding: 85px 20px;
+    text-align: center;
+    background: white;
+}
+
+.countdown-section h2,
+.section-heading h2 {
+    color: #d95f8e;
+    font-size: 30px;
+}
+
+.countdown-section > p {
+    margin-top: 12px;
+    color: #977183;
+    font-size: 14px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.time-box {
+    background: #fff0f6;
+    padding: 22px;
+    border-radius: 15px;
+    min-width: 90px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e66b9b;
+}
+
+.time-box small {
+    color: #a56b83;
+}
+
+/* Memories */
+
+.memories-section {
+    padding: 90px 8%;
+    background: #fff7fa;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading > p:first-child {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #bd8099;
+}
+
+.section-heading h2 {
+    margin: 12px 0;
+}
+
+.section-heading > p:last-child {
+    font-size: 13px;
+    color: #98788a;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 13px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px #d69bb522;
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-card h3 {
+    color: #d95f8e;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.photo-card p {
+    color: #98788a;
+    font-size: 12px;
+    margin: 8px 0 12px;
+}
+
+/* Love Letter */
+
+.letter-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #fce3ed, #fff6fa);
+    display: flex;
+    justify-content: center;
+}
+
+.letter-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 40px #d89bb733;
+}
+
+.letter-icon {
+    font-size: 45px;
+}
+
+.letter-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c77d99;
+    margin: 15px 0;
+}
+
+.letter-card h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #e66b9b;
+    margin-bottom: 25px;
+}
+
+#loveLetter {
+    line-height: 2.2;
+    font-size: 14px;
+    color: #80566a;
+    white-space: pre-line;
+    min-height: 120px;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #e66b9b;
+    margin-top: 25px;
+}
+
+/* Final Surprise */
+
+.surprise-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: white;
+}
+
+.cake {
+    font-size: 85px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.surprise-content h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #e66b9b;
+    margin: 20px 0;
+}
+
+.surprise-content p {
+    max-width: 500px;
+    margin: auto;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.final-message {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #dc6594;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* Footer */
+
+footer {
+    padding: 30px;
+    background: #ffe9f1;
+    text-align: center;
+    color: #a56b83;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Animations */
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .countdown-section h2,
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .time-box {
+        min-width: 70px;
+        padding: 15px 10px;
+    }
+
+    .time-box span {
+        font-size: 25px;
+    }
+
+    .memories-section {
+        padding: 65px 20px;
+    }
+
+    .letter-card {
+        padding: 30px 20px;
+    }
+
+    .letter-card h2 {
+        font-size: 40px;
+    }
+
+    .surprise-content h2 {
+        font-size: 42px;
+    }
+}
