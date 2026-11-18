@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aun BUBU ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+
+        <div class="welcome-card">
+            <div class="heart">❤️</div>
+
+            <h1>Hey Aun BUBU!</h1>
+
+            <p>I have made something special for you...</p>
+
+            <p class="small-text">A little surprise from my heart ❤️</p>
+
+            <button onclick="openSurprise()">
+                Open Your Surprise 💌
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">For My BUBU ❤️</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#memories">Memories</a>
+            <a href="#letter">My Letter</a>
+            <a href="#surprise">Surprise</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="top-text">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+
+            <h1>Happy Birthday</h1>
+
+            <h2>Aun BUBU ❤️</h2>
+
+            <p class="hero-description">
+                Today is all about you, your smile,
+                your happiness and all the beautiful memories
+                we share together.
+            </p>
+
+            <div class="birthday-date">
+                21 . 12 . 2026
+            </div>
+
+            <a href="#memories" class="main-button">
+                Explore Our Memories ❤️
+            </a>
+
+        </div>
+
+        <div class="floating-heart">💗</div>
+        <div class="floating-flower">🌸</div>
+
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+
+        <h2>Counting Down To Your Special Day</h2>
+
+        <p>Every second brings us closer to your birthday ❤️</p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <p id="countdownMessage"></p>
+
+    </section>
+
+    <!-- Memories Section -->
+    <section class="memories-section" id="memories">
+
+        <div class="section-heading">
+            <p>OUR LITTLE WORLD</p>
+            <h2>Beautiful Memories 📸</h2>
+            <p>Some moments become memories, some memories become forever.</p>
+        </div>
+
+       
+<div class="gallery">
+
+    <div class="photo-card">
+        <img src="images/only%20u.jpg" alt="Only You">
+        <h3>Only You ❤️</h3>
+        <p>You are my favourite person.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/kids.jpg" alt="Beautiful Memory">
+        <h3>Sweet Memories 🌸</h3>
+        <p>Every moment is special.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/frame.jpg" alt="Our Frame">
+        <h3>Our Beautiful Frame 💕</h3>
+        <p>A memory worth keeping forever.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/two%20soul.jpg" alt="Two Souls">
+        <h3>Two Souls 🥹</h3>
+        <p>Two souls, countless memories.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/you%20and%20me.jpg" alt="You and Me">
+        <h3>You & Me ❤️</h3>
+        <p>My favourite story is ours.</p>
+    </div>
+
+</div>
+
+
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="letter-section" id="letter">
+
+        <div class="letter-card">
+
+            <div class="letter-icon">💌</div>
+
+            <p class="letter-label">A LETTER FROM MY HEART</p>
+
+            <h2>Dear Aun BUBU,</h2>
+
+            <p id="loveLetter"></p>
+
+            <h3 class="signature">With lots of love ❤️</h3>
+
+        </div>
+
+    </section>
+
+    <!-- Final Surprise -->
+    <section class="surprise-section" id="surprise">
+
+        <div class="surprise-content">
+
+            <div class="cake">🎂</div>
+
+            <h2>Make A Wish, BUBU! ✨</h2>
+
+            <p>
+                May your life be filled with happiness,
+                beautiful moments, endless smiles
+                and everything your heart wishes for.
+            </p>
+
+            <button onclick="showBirthdayWish()">
+                Click For Your Final Surprise 🎁
+            </button>
+
+            <div id="finalMessage" class="final-message"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Made with ❤️ just for Aun BUBU</p>
+
+        <p>Forever special. Forever beautiful. 🌸</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
